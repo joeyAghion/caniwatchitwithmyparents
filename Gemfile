@@ -15,8 +15,6 @@ gem 'uglifier'
 
 gem 'jquery-rails'
 
-gem 'therubyracer-heroku', '0.8.1.pre3'
-
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -29,4 +27,9 @@ gem 'therubyracer-heroku', '0.8.1.pre3'
 group :development do
   gem 'heroku'
   gem 'loofah'
+end
+
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3'
+  gem 'pg'
 end
