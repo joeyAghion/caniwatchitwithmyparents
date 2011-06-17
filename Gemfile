@@ -26,4 +26,5 @@ gem 'jquery-rails'
 
 group :development do
   gem 'heroku'
+  gem 'loofah'
 end

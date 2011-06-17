@@ -1,0 +1,10 @@
+<h1>Can I Watch it With My Parents?</h1>
+<%= form_tag do %>
+  <%= text_field_tag 'movie', @movie, :class => 'text', :placeholder => 'Movie name' %>
+  <%= submit_tag 'Check', :class => 'submit light' %>
+<% end %>
+<% if @movie.present? %>
+  <div class="result">
+    No
+  </div>
+<% end %>

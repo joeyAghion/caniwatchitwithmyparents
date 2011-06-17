@@ -7,3 +7,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require ../../../vendor/assets/javascripts/jquery.autocomplete.js

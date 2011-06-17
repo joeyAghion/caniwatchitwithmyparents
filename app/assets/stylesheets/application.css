@@ -2,6 +2,88 @@
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require reset
  *= require_self
- *= require_tree . 
 */
+
+div.container {
+  width: 650px;
+  margin: auto;
+}
+h1 {
+  font-family: 'Bangers', sans-serif;
+  font-size: 55px;
+  color: #333;
+  margin: 20px 0;
+}
+input {
+  border: 1px solid #666;
+  padding: 6px;
+  font-size: 20px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  color: #333;
+}
+input.text {
+  width: 475px;
+}
+input.submit {
+  width: 150px;
+  color: #666;
+}
+
+div.result {
+  font-family: 'Bangers', sans-serif;
+  font-size: 100px;
+  text-align: center;
+  color: #c33;
+  margin: 20px 0;
+}
+input.light{
+  background-color:#fff;
+  background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ffffff), color-stop(100%, #cecece));
+  background-image:-moz-linear-gradient(top, #ffffff 0%, #cecece 100%);
+  background-image:linear-gradient(top, #ffffff 0%, #cecece 100%);
+  border-color:#666;
+  text-shadow:#fff 0px 1px 1px;
+  -moz-box-shadow:rgba(255,255,255,0.867) 0 0 0.1em 1px inset;
+  -webkit-box-shadow:rgba(255,255,255,0.867) 0 0 0.1em 1px inset;
+  -o-box-shadow:rgba(255,255,255,0.867) 0 0 0.1em 1px inset;
+  box-shadow:rgba(255,255,255,0.867) 0 0 0.1em 1px inset;
+  -moz-background-clip:padding;
+  -webkit-background-clip:padding;
+  -o-background-clip:padding-box;
+  -ms-background-clip:padding-box;
+  -khtml-background-clip:padding-box;
+  background-clip:padding-box;
+}
+input.light, input.light:visited{
+  color:#333;
+}
+input.light:hover, input.light:focus{
+  background-color:#fff;
+  background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #fcfcfc), color-stop(100%, #c6c6c6));
+  background-image:-moz-linear-gradient(top, #fcfcfc 0%, #c6c6c6 100%);
+  background-image:linear-gradient(top, #fcfcfc 0%, #c6c6c6 100%);
+  border-color:#777;
+  text-shadow:#fff 0px 1px 1px;
+}
+input.light:hover,input.light:hover:visited,input.light:focus,input.light:focus:visited{
+  color:#333;
+}
+input.light:active{
+  background-color:#fff;
+  background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #cbcbcb), color-stop(40%, #d3d3d3), color-stop(85%, #d3d3d3), color-stop(100%, #e5e5e5));
+  background-image:-moz-linear-gradient(top, #cbcbcb 0%, #d3d3d3 40%, #d3d3d3 85%, #e5e5e5 100%);
+  background-image:linear-gradient(top, #cbcbcb 0%, #d3d3d3 40%, #d3d3d3 85%, #e5e5e5 100%);
+  border-color:#777;
+  text-shadow:#fff 0px -1px -1px;
+  -moz-box-shadow:#b7b7b7 0 0.08em 0.1em 1px inset;
+  -webkit-box-shadow:#b7b7b7 0 0.08em 0.1em 1px inset;
+  -o-box-shadow:#b7b7b7 0 0.08em 0.1em 1px inset;
+  box-shadow:#b7b7b7 0 0.08em 0.1em 1px inset;
+}
+input.light:active,input.light:active:visited{
+  color:#333;
+}
