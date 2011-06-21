@@ -15,6 +15,8 @@ gem 'uglifier'
 
 gem 'jquery-rails'
 
+gem 'loofah'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -26,7 +28,6 @@ gem 'jquery-rails'
 
 group :development do
   gem 'heroku'
-  gem 'loofah'
 end
 
 group :production do

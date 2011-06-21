@@ -1,10 +1,23 @@
 <h1>Can I Watch it With My Parents?</h1>
 <%= form_tag do %>
-  <%= text_field_tag 'movie', @movie, :class => 'text', :placeholder => 'Movie name' %>
+  <%= text_field_tag 'movie', params[:movie], :class => 'text', :placeholder => 'Movie name' %>
   <%= submit_tag 'Check', :class => 'submit light' %>
 <% end %>
-<% if @movie.present? %>
+<% if params[:movie].present? %>
   <div class="result">
-    No
+    <% if @movie && 'G' == @movie.rating %>
+      <span class="yes">Yes</span>
+    <% else %>
+      <span class="no">No</span>
+    <% end %>
   </div>
+<% end %>
+
+<%= content_for :domready do %>
+  $('input.text').autocomplete(<%=raw search_url.to_json %>, {
+    minChars: 3,
+    scrollHeight: 375
+  }).result(function(e, item) {
+    $('form').submit();
+  });
 <% end %>

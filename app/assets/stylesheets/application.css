@@ -6,6 +6,9 @@
  *= require_self
 */
 
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
 div.container {
   width: 650px;
   margin: auto;
@@ -37,8 +40,25 @@ div.result {
   font-family: 'Bangers', sans-serif;
   font-size: 100px;
   text-align: center;
-  color: #c33;
   margin: 20px 0;
+}
+div.result span.no {
+  color: #c33;
+}
+div.result span.yes {
+  color: #3c3;
+}
+div.ac_results {
+  width:475px;
+  background:#e5e5e5;
+  padding: 0 6px;
+}
+div.ac_results .ac_over {
+  background: #0A246A;
+  color: #fff;
+}
+div.ac_results li {
+  padding:6px 0;
 }
 input.light{
   background-color:#fff;

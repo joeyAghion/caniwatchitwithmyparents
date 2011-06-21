@@ -12,10 +12,10 @@ require 'loofah'
 
 doc = Loofah.document(File.read(file_name))
 
-movies = []
-doc.xpath("//tr[@bgcolor='#FFFFFF']/td[1] | //tr[@bgcolor='#E7E7E7']/td[1]").each do |row|
-  row = row.text.strip!
-  movies << row if row.valid_encoding?
+movies = {}
+doc.xpath("//tr[@bgcolor='#FFFFFF'] | //tr[@bgcolor='#E7E7E7']").each do |row|
+  name = row.children[0].text.strip
+  movies[name] = row.children[2].text.strip if name.valid_encoding?
 end
 
 $stdout.puts movies.to_yaml
